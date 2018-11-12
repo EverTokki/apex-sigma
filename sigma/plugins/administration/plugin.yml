@@ -165,6 +165,7 @@ commands:
     global:  true
     enabled: true
     sfw:     true
+    pmable:  true
     usage:   "{pfx:s}{cmd:s} fun"
     description:
       Reloads the selected plugin
@@ -188,6 +189,16 @@ commands:
     description:
       Toggles if a server by the given ID is or is not an Aurora Project partner.
 
+  - name:    triggerupdate
+    global:  true
+    enabled: true
+    admin:   true
+    sfw:     true
+    pmable:  true
+    usage:   "{pfx:s}{cmd:s}"
+    description:
+      Updates the bot
+
 
 events:
   - name:    pmdetect
@@ -198,6 +209,15 @@ events:
     pmable:  true
     description:
       Redirects PM info to the bot owner.
+
+  - name:    spam_monitor
+    type:    message
+    global:  true
+    enabled: true
+    sfw:     true
+    pmable:  false
+    description:
+      Monitors the servers for possible spam
 
   - name:    version_updater
     type:    ready
