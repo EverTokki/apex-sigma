@@ -23,7 +23,7 @@ async def display_thread(cmd, channel, args):
         return
 
     root = BeautifulSoup(page, "lxml")
-    topic = Topic(root)
+    topic = Topic(root, cmd.log)
     
     try:
         subforum_name       = topic.getSubforum()
