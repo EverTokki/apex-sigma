@@ -3,7 +3,7 @@ import msgpack
 import zmq
 
 
-class CtrlClient():
+class CtrlReciever():
 
     context = zmq.Context()
 
@@ -11,7 +11,7 @@ class CtrlClient():
         self.handler = handler
         self.ev      = ev
 
-        self.socket = CtrlClient.context.socket(zmq.PULL)
+        self.socket = CtrlReciever.context.socket(zmq.PULL)
         self.socket.connect('tcp://%s:%s' % (ip, port))
 
 
