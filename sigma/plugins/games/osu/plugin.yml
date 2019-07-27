@@ -48,3 +48,12 @@ events:
     sfw:     true
     description:
       provides the server a feed of new threads and posts from osu's off-topic subforum
+
+  - name:    ot_monitor
+    type:    ready
+    global:  true
+    enabled: true
+    pmable:  true
+    sfw:     true
+    description:
+      provides the server a feed of user events from osu's off-topic subforum
