@@ -1,0 +1,24 @@
+name: OTMonitor
+
+categories:
+  - games
+
+enabled: true
+
+commands:
+  - name:    set_denizen_status
+    global:  true
+    enabled: true
+    sfw:     true
+    usage:   "{pfx:s}{cmd:s} denizen_id status"
+    description:
+      TODO
+
+commands:
+  - name:    ot_monitor_about
+    global:  true
+    enabled: true
+    sfw:     true
+    usage:   "{pfx:s}{cmd:s}"
+    description:
+      TODO
