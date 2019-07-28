@@ -2,7 +2,7 @@ import asyncio
 import discord
 import json
 
-from sigma.core.ctrl_reciever import CtrlReciever
+from sigma.core.data_reciever import DataReciever
 from dateutil.parser import parse
 
 
@@ -16,7 +16,7 @@ class DataHandler():
     CHECK            = 5
 
     @staticmethod
-    async def handle_data(ev, data):
+    async def handle_data(data, ev):
         embed = None
 
         if data['type'] == DataHandler.POST_MILESTONE:   embed = DataHandler.handle_post_milestone(data)
@@ -27,6 +27,7 @@ class DataHandler():
         if data['type'] == DataHandler.NEW_DENIZEN:      embed = DataHandler.handle_new_denizen(data)
         if data['type'] == DataHandler.CHECK:
             ev.log.info('OT monitor checked in')
+            return
 
         try:
             for server in ev.bot.guilds:
@@ -64,7 +65,7 @@ class DataHandler():
 
 async def ot_monitor(ev):
 
-    connection = CtrlReciever(ev, '127.0.0.1', 55556, DataHandler.handle_data)
+    data_reciever = DataReciever(55556, DataHandler.handle_data)
     while True:
         await asyncio.sleep(0.1)
-        await connection.read_data()
+        await data_reciever.read_data((ev,))
