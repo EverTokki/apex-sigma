@@ -1,9 +1,0 @@
-
-
-class OTMonitorEnum():
-
-    SET_DENIZEN_STATUS     = 0
-    SET_DENIZEN_POST_REQ   = 1
-    GET_USERNAME_FROM_ID   = 2
-    GET_USER_POST_COUNT    = 3
-    GET_USER_THREAD_COUNT  = 4
