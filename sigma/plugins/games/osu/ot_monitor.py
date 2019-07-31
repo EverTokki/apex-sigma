@@ -50,12 +50,12 @@ class DataHandler():
 
     @staticmethod
     def handle_new_foreigner(data):
-        return discord.Embed(color=0x1ABC9C, title=f'Welcome a new foreigner in OT: {data["username"]}!')
+        return discord.Embed(color=0x1ABC9C, title=f'Welcome a new foreigner in OT: {data["username"]}')
 
 
     @staticmethod
     def handle_user_rename(data):
-        return discord.Embed(color=0x1ABC9C, title=f'{data["username_old"]} renamed themselves to {data["username_new"]}!')
+        return discord.Embed(color=0x1ABC9C, title=f'{data["username_old"]} renamed themselves to {data["username_new"]}')
 
 
     @staticmethod
