@@ -66,6 +66,15 @@ events:
     description:
       provides the server a feed of user events from osu's off-topic subforum
 
+  - name:    ot_ledger
+    type:    ready
+    global:  true
+    enabled: true
+    pmable:  true
+    sfw:     true
+    description:
+      provides the server a feed of OT Economy events
+
   - name:    discord_osu_linker
     type:    ready
     global:  true
