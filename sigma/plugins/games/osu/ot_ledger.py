@@ -42,16 +42,16 @@ class DataHandler():
 
     @staticmethod
     def handle_coins_transfer(data):
-        icon_from = DataHandler.icon_from(data['from_status'])
-        icon_to   = DataHandler.icon_from(data['to_status'])
+        icon_from = DataHandler.translate_status_to_icon(data['status_from'])
+        icon_to   = DataHandler.translate_status_to_icon(data['status_to'])
 
         return discord.Embed(color=0x1ABC9C, title=f':moneybag: {data["amount"]} coins', description=f'({icon_from}) {data["from"]} -> ({icon_to}) {data["to"]} ')
 
 
     @staticmethod
     def handle_thread_transfer(data):
-        icon_from = DataHandler.icon_from(data['from_status'])
-        icon_to   = DataHandler.icon_from(data['to_status'])
+        icon_from = DataHandler.translate_status_to_icon(data['status_from'])
+        icon_to   = DataHandler.translate_status_to_icon(data['status_to'])
 
         return discord.Embed(color=0x1ABC9C, title=f'Thread ownership transfered!', description=f'({icon_from}) {data["from"]} -> ({icon_to}) {data["to"]} ')
 
