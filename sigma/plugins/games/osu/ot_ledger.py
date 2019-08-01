@@ -58,7 +58,7 @@ class DataHandler():
 
     @staticmethod
     def handle_new_account(data):
-        return discord.Embed(color=0x1ABC9C, title=f'New account: {data["username"]}', description=f'Starts with {data["coins"]} coins!')
+        return discord.Embed(color=0x1ABC9C, title=f'New account: {data["user"]}', description=f'Starts with {data["coins"]} coins!')
 
 
     @staticmethod
