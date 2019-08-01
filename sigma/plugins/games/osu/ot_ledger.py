@@ -14,7 +14,7 @@ class DataHandler():
     NEW_ACCOUNT      = 3
 
     OT_GOVERNMENT = 0  # OT Government treasury
-    OT_PALIAMENT  = 1  # One of OT Paliament members
+    OT_PARLIAMENT = 1  # One of OT Parliament members
     DENIZEN_NOBLE = 2  # Denizens who control majority of content in OT
     DENIZEN_HIGH  = 3  # Denizens who are known for at least something
     DENIZEN_REG   = 4  # Regular denizens who are not in significant positions
