@@ -64,7 +64,7 @@ class DataHandler():
     @staticmethod
     def translate_status_to_icon(status):
         if status == DataHandler.OT_GOVERNMENT: return ':classical_building:'
-        if status == DataHandler.OT_PALIAMENT:  return ':scroll:'
+        if status == DataHandler.OT_PARLIAMENT: return ':scroll:'
         if status == DataHandler.DENIZEN_NOBLE: return ':small_blue_diamond:'
         return ''
 
