@@ -45,7 +45,12 @@ class DataHandler():
         icon_from = DataHandler.translate_status_to_icon(data['status_from'])
         icon_to   = DataHandler.translate_status_to_icon(data['status_to'])
 
-        return discord.Embed(color=0x1ABC9C, title=f':moneybag: {data["amount"]} coins', description=f'({icon_from}) {data["from"]} -> ({icon_to}) {data["to"]} ')
+        info = f'{icon_from} {data["from"]} → {icon_to} {data["to"]}\n\
+                 \n\
+                 {data["from"]} now has {round(data["from_balance"], 4)} coins\n\
+                 {data["to"]} now has {round(data["to_balance"], 4)} coins'
+
+        return discord.Embed(color=0x1ABC9C, title=f':moneybag: {round(data["amount"], 4)} coins', description=info)
 
 
     @staticmethod
@@ -53,7 +58,7 @@ class DataHandler():
         icon_from = DataHandler.translate_status_to_icon(data['status_from'])
         icon_to   = DataHandler.translate_status_to_icon(data['status_to'])
 
-        return discord.Embed(color=0x1ABC9C, title=f'Thread ownership transfered!', description=f'({icon_from}) {data["from"]} -> ({icon_to}) {data["to"]} ')
+        return discord.Embed(color=0x1ABC9C, title=f'Thread ownership transfered!', description=f'{icon_from} {data["from"]} -> {icon_to} {data["to"]} ')
 
 
     @staticmethod
