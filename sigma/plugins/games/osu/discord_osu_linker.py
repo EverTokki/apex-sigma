@@ -24,6 +24,7 @@ async def discord_osu_linker(ev):
                 for activity in user.activities:
                     if activity.name != 'osu!': continue
                     #if activity.application_id != 367827983903490050
+                    if activity.large_image_text == None: continue
                     username = activity.large_image_text.split('(')[0].strip()
 
                 # Fetch user info via osu api
