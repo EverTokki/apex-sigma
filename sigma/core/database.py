@@ -9,6 +9,7 @@ from .db_nodes.settings import set_settings_node, add_new_server_settings_node
 from .db_nodes.settings import get_settings_node, init_server_settings_node, check_for_missing_settings_node
 from .db_nodes.inventory import get_inventory, add_to_inventory, del_from_inventory
 from .db_nodes.profiles import updateDiscordProfileLink, removeDiscordProfileLink, getDiscordProfileLink, setModerationDiscordProfileLink, isModerationDiscordProfileLink
+from .db_nodes.osu_link import set_osu_link, get_osu_link
 
 
 class DatabaseError(Exception):
@@ -125,3 +126,9 @@ class Database(object):
 
     def isModerationDiscordProfileLink(self, uid):
         return isModerationDiscordProfileLink(self.db, uid)
+
+    def set_osu_link(self, discord_id, user_id, username):
+        return set_osu_link(self.db, discord_id, user_id, username)
+
+    def get_osu_link(self, discord_id):
+        return get_osu_link(self.db, discord_id)

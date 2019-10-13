@@ -38,6 +38,14 @@ commands:
     description:
       Displays forum post
 
+  - name:    osu_username
+    global:  true
+    enabled: true
+    sfw:     true
+    usage:   "{pfx:s}{cmd:s} user"
+    description:
+      Displays user's osu username
+
 
 events:
   - name:    ot_feed
@@ -48,3 +56,30 @@ events:
     sfw:     true
     description:
       provides the server a feed of new threads and posts from osu's off-topic subforum
+
+  - name:    ot_monitor
+    type:    ready
+    global:  true
+    enabled: true
+    pmable:  true
+    sfw:     true
+    description:
+      provides the server a feed of user events from osu's off-topic subforum
+
+  - name:    ot_ledger
+    type:    ready
+    global:  true
+    enabled: true
+    pmable:  true
+    sfw:     true
+    description:
+      provides the server a feed of OT Economy events
+
+  - name:    discord_osu_linker
+    type:    ready
+    global:  true
+    enabled: true
+    pmable:  true
+    sfw:     true
+    description:
+      Links discord user ids to osu ids when possible
