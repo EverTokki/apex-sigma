@@ -29,8 +29,13 @@ class DataHandler():
             ev.log.error('Unable to send message to ot-feed;\n' + str(data) + '\n' + str(e))
 
 
+<<<<<<< HEAD
 async def ot_feed(ev):
 
+=======
+
+async def ot_feed(ev):
+>>>>>>> c600f3a5570e813609428ca8c2103b867ec98d1b
     data_reciever = DataReciever(55555, DataHandler.handle_data)
     while True:
         await asyncio.sleep(0.1)
