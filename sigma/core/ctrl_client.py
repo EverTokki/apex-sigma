@@ -12,7 +12,11 @@ class CtrlClient():
         self.handler = handler
         self.socket  = None
         self.port    = port
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> c600f3a5570e813609428ca8c2103b867ec98d1b
         self.__register()
 
 
@@ -30,7 +34,11 @@ class CtrlClient():
             self.logger.error('Timed out')
             self.__register()
             return False
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> c600f3a5570e813609428ca8c2103b867ec98d1b
 
     def __register(self):
         if self.socket != None: self.socket.close()
